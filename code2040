@@ -1,0 +1,16 @@
+import json
+import request
+
+Def GetToken():
+reg = {"Email": "andrew.garrett@morehouse.edu","github": "https://github.com/drew8benten/The-Special-Formula/new/master"}
+	tokenPost = requests.post("http://challenge.code2040.org/api/register", data=json.dumps(reg))
+	d = json.loads(tokenPost.text)
+	regID = d["result"]
+	return regID
+	
+	
+def tester():
+	
+	token = GetToken()
+
+tester()
